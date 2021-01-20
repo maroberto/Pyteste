@@ -1,22 +1,12 @@
-import PySimpleGUI as sg
+a = float(input('Qual é a sua altura? (ex. 1.75):  '))
+p = float(input('Qual é o seu peso? '))
 
-sg.theme('Dark Green 2')
+imc = p / (a * a)
 
-layout = [  [sg.Text('My Window')],
-            [sg.Input(key='-IN-'), sg.Text(size=(15,1), key='-OUT-')],
-            [sg.Button('Go'), sg.Button('Exit')]
-              ]
 
-window = sg.Window('Window Title', layout, finalize=True)
-
-window['-IN-'].bind("<FocusIn>", '+FOCUS+')
-window.bind("<Button-1>", 'Window Click')
-window['Go'].bind("<Button-3>", '+RIGHT CLICK+')
-
-while True:             # Event Loop
-    event, values = window.read()
-    print(event, values)
-    if event in (sg.WIN_CLOSED, 'Exit'):
-        break
-
-window.close(); del window
+peso = []
+ideal = 24.9
+while (p / (a * a) > ideal):
+    p = (p - 1)
+    peso.append(p)
+print('Seu peso ideal é {:.0f}'.format(peso[-1]))
