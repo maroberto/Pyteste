@@ -116,6 +116,8 @@ exer
 pyteste
 .idea/
 teste
+.vscode
+
 
 # Spyder project settings
 .spyderproject
