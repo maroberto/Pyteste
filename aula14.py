@@ -9,14 +9,14 @@ n = 1
 while n != 0:
     n = int(input('Digite um valor: '))
 print('Fim')
-# sim ou não 
+# sim ou não
 r = 'S'
 while r == 'S':
     n = int(input('Digite um valor: '))
     r = str(input('Que continuar? [S/N] ')).upper()
 print('Fim')
 # par ou impar
-n = 1 
+n = 1
 par = impar = 0
 while n != 0:
     n = int(input('Digite um valor: '))
